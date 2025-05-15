@@ -1,0 +1,264 @@
+:root { 
+    /* Color Variables */
+    --sage-50: #f2f5f2;
+    --sage-100: #e6ece6;
+    --sage-200: #c8d6c8;
+    --sage-300: #a9bfa9;
+    --sage-400: #8aa88a;
+    --sage-500: #6b916b;
+    --sage-600: #557455;
+    --sage-700: #405840;
+    --sage-800: #2a3c2a;
+    --sage-900: #151e15;
+    
+    --earth-50: #f8f5f1;
+    --earth-100: #f1ebe3;
+    --earth-300: #d4c3ab;
+    --earth-500: #b79b73;
+    --earth-700: #6e5d45;
+    
+    --sky-50: #f0f7fa;
+    --sky-100: #e1eff5;
+    --sky-300: #a5cfe1;
+    --sky-500: #69afcd;
+    --sky-700: #3f697b;
+    --red-100: #fa0015;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+    background-color: var(--sage-50);
+}
+a {
+    text-decoration: none;
+    color: var(--sage-600);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--sage-500);
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    padding: 5rem 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+    
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mb-12 {
+    margin-bottom: 3rem;
+}
+
+.mb-16 {
+    margin-bottom: 4rem;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--sage-500);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--sage-600);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--sage-500);
+    border: 1px solid var(--sage-200);
+}
+
+.btn-secondary:hover {
+    background-color: var(--sage-50);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+    
+}
+
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--sage-200);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--sage-400);
+}
+
+.form-textarea {
+    
+    min-height: 90px;
+    resize: vertical;
+}
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #c8d6c8;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  .login-container {
+    background: var(--sage-50);
+    padding: 20px;
+    box-shadow: var(--sage-50);
+    border-radius: 5px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 4px 0;
+    border: 1px solid var(--sage-50);
+    border-radius: 4px;
+}
+
+
+button {
+    width: 300px;
+    padding: 10px;
+    align-items: center;
+    background-color: var(--sage-600);
+    color: var(--sage-900);
+    border: none;
+    margin: 4px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--sage-700);
+}
+
+.error-message {
+    color: var(--red-100);
+    font-size: 14px;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--sage-700);
+}
+
+.logo span {
+    color: var(--sage-500);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--sage-700);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--sage-500);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--sage-500);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+

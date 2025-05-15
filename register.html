@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+ <body>
+  <nav class="navbar">
+    <div class="navbar-container">
+        <a href="#" class="logo">Healthy<span>Habitat</span></a>
+        <div class="nav-links">
+        </div>
+    </div>
+</nav> 
+  <!-- Registration Section -->
+  <section class="section" id="register-section">
+    <div class="container">
+        <div class="text-center mb-12">
+            <h2 class="text-sage-800 mb-4">Join Our Community</h2>
+            <p class="text-muted-foreground text-lg">
+                Register as a business or resident to connect with our sustainable health and wellness network.
+            </p>
+        </div>
+
+        <form action="Resident_Registration.php" class="registration-form" method="post"  id="resident-form">
+
+        <div class = "form-group">
+            <label for="user-type">Select User Type:</label>
+            <select id="user-type" name="user_type" class="form-select" required>
+                <option value="">User Type</option>
+                <option value="resident">Resident</option>
+                <option value="council">Local Council</option>
+            </select>
+        </div>
+        
+        
+        <div class="tab-content" id="resident-tab">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">First Name</label>
+                        <input type="text" name="r_f_name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" name="r_l_name" class="form-input" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" name="r_email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <input type="password" name="r_password" class="form-input" required>
+              </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Age Group</label>
+                        <select class="form-select" name="r_age" required>
+                            <option value="">Select age group</option>
+                            <option value="18-24">18-24</option>
+                            <option value="25-34">25-34</option>
+                            <option value="35-44">35-44</option>
+                            <option value="45-54">45-54</option>
+                            <option value="55-64">55-64</option>
+                            <option value="65+">65 and above</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Gender</label>
+                        <select class="form-select" name="r_gender" required>
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="non-binary">Non-binary</option>
+                            <option value="prefer-not">Prefer not to say</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Your Area</label>
+                    <select class="form-select" name="r_area"  required id="area-select">
+                        <option value="">Select your area</option>
+                        <option value="north">London</option>
+                        <option value="south">Manchester</option>
+                        <option value="east">Birmingham</option>
+                        <option value="west">Liverpool</option>
+                        <option value="central">Leeds</option>
+                       </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Areas of Interest (select multiple)</label>
+                    <div class="form-group">
+                        <label class="form-checkbox">
+                            <input type="checkbox" name="interests_1" value="nutrition"> Nutrition
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-checkbox">
+                            <input type="checkbox" name="interests_2" value="fitness"> Fitness
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-checkbox">
+                            <input type="checkbox" name="interests_3" value="mental-health"> Mental Health
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-checkbox">
+                            <input type="checkbox" name="interests_4" value="sustainable"> Sustainable Living
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-checkbox">
+                            <input type="checkbox" name="interests_5" value="eco-products"> Eco-Friendly Products
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" name="register_resident" class="btn btn-primary btn-full">Register as Resident</button>
+            </form >
+        </div> 
+        
+        <div class="tab-content" id="council-tab">
+            <form class="registration-form" action="Registration_Council.php" method="post" id="council-form">
+                <div class="form-group">
+                    <label class="form-label">Council Name</label>
+                    <input type="text" name="c_name" class="form-input" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Contact Person</label>
+                        <input type="text" name="c_person" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Official Email</label>
+                        <input type="email" name="c_email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Password</label>
+                      <input type="password" name="c_password" class="form-input" required>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Phone Number</label>
+                    <input type="tel" name="c_phone" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Region/Area Name</label>
+                    <input type="text" name="c_region" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Region Description</label>
+                    <textarea name="c_description" class="form-textarea" ></textarea>
+                </div>
+                
+                <button type="submit" name="register_council" class="btn btn-primary btn-full">Register Council</button>
+            </form>
+        </div>
+        <p class="small-text">Already have an account? <a href="login1.html">Login</a></p>
+
+    </div>
+</section> 
+
+
+<script src="register.js"></script>
+
+</body>
+</html>
